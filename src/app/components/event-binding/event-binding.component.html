@@ -1,0 +1,33 @@
+<div style="display: flex; justify-content: center">
+  <p style="font-size: 25px; color: purple">Event Binding (View => Class)</p>
+</div>
+
+<!-- Click Event -->
+<div>
+  <!-- <button class="btn btn-info">Bootstrap</button>
+  <button mat-button>Angular Basic</button>
+  <button mat-flat-button color="primary">Angular Flat</button> -->
+  <button mat-raised-button color="accent" (click)="getName()">
+    Display Name
+  </button>
+  <button mat-raised-button color="primary" (click)="clearName()">
+    Clear Name
+  </button>
+  <!-- <button mat-stroked-button color="warn">Angular Stroked</button> -->
+</div>
+<p>Name: {{ name }}</p>
+
+<!-- Double Click -->
+<button mat-stroked-button (dblclick)="onDoubleClick()">Double Click Me</button>
+<p>Action: {{ result }}</p>
+
+<!-- Input Event -->
+<mat-form-field appearance="outline">
+  <mat-label>Enter Something</mat-label>
+  <!-- <input type="text" matInput (input)="onInput($event)" /> -->
+
+  <input type="text" matInput (input)="onInput($event.target.value)" />
+</mat-form-field>
+<p>Input Value: {{ inputValue }}</p>
+
+<!-- Change Events -->
