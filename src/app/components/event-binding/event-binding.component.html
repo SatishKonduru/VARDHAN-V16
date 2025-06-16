@@ -99,4 +99,51 @@
 
 
   <!-- Drag & Drop -->
+
+<div id="dragItem"
+  style="display: flex;
+  justify-content: center;
+  align-items: center;;
+  height: 50px;
+  background-color: rgb(104, 15, 110);
+  width: 120px;
+  color: #fff;
+  cursor: grab;
+  margin-bottom: 20px;"
+
+  draggable="true"
+  (dragstart)="onDragStart($event)">
+Drag Me
 </div>
+
+<div id="dropZone"
+    style="height: 150px;
+    background-color: #f9f1fc;
+    width: 320px;
+    border: 2px dashed purple;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    color: #6a0dad;
+    font-weight: bold"
+
+    (dragover)="onDragOver($event)"
+    (drop)="onDrop($event)"
+>
+Drop Here
+</div>
+<p>Drag Status: {{dragStatus}}</p>
+</div>
+
+
+<div style="height: 100px;
+background-color: bisque;
+overflow: auto;
+margin: 20px auto;
+width: 500px"
+(scroll)="onScroll($event)"
+>
+  <div style="height: 500px">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur autem saepe laborum tempora reprehenderit accusamus ea rerum quasi velit ad fugiat eaque odio dolorum quis placeat labore veniam, officiis impedit.</div>
+</div>
+<p>Scroll Status: {{scrollStatus}}</p>

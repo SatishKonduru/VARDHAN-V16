@@ -21,6 +21,8 @@ export class EventBindingComponent {
   keyEnterValue = '';
   focusStatus = '';
   contextValue = '';
+  dragStatus = '';
+  scrollStatus = '';
   getName() {
     this.name = 'Satish';
   }
@@ -70,5 +72,35 @@ export class EventBindingComponent {
   onRightClick = (e: MouseEvent) => {
     e.preventDefault();
     this.contextValue = 'Right Clicked';
+  };
+
+  onDragStart = (e: DragEvent) => {
+    this.dragStatus = 'Dragging Started';
+    // set the id of the dragged element under 'dataTrasfer'
+    e.dataTransfer?.setData('vardhan', 'dragItem');
+  };
+
+  onDragOver = (e: DragEvent) => {
+    e.preventDefault();
+    this.dragStatus = 'Over the Drop Zone';
+  };
+
+  onDrop = (e: DragEvent) => {
+    e.preventDefault();
+    const draggedElementId = e.dataTransfer?.getData('vardhan');
+    const draggedElement = document.getElementById(draggedElementId!);
+    // here ! is called 'non-null assertion operator' in TS
+    // draggedElementId! => Trust me its a string, not undefined or null
+    // so, you can bypass the safety checks
+    const dropZone = document.getElementById('dropZone');
+    if (draggedElementId && dropZone) {
+      dropZone.appendChild(draggedElement);
+      this.dragStatus = 'Dropped Successfully';
+    } else {
+      this.dragStatus = 'Dropping Failed';
+    }
+  };
+  onScroll = (e: Event) => {
+    this.scrollStatus = 'YOU SCROLLED';
   };
 }
