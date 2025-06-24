@@ -19,6 +19,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { TempRefVariablesComponent } from './components/temp-ref-variables/temp-ref-variables.component';
 import { FormsModule } from '@angular/forms';
+import { IfComponent } from './components/if/if.component';
+import { SwitchComponent } from './components/switch/switch.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { FormsModule } from '@angular/forms';
     ClassBindingComponent,
     EventBindingComponent,
     TempRefVariablesComponent,
+    IfComponent,
+    SwitchComponent,
   ],
   imports: [
     CommonModule,

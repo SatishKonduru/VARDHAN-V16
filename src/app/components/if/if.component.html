@@ -1,0 +1,29 @@
+<div style="display: flex; justify-content: center">
+  <p style="font-size: 25px; color: purple">*ngIf</p>
+</div>
+
+<div class="container">
+  <!-- <p *ngIf="isLoggedIn; else guest">Welcome User</p>
+  <ng-template #loggedOut>Please Login...</ng-template>
+  <ng-template #guest>Welcome Guest</ng-template> -->
+
+  <ng-container
+    *ngIf="isLoading; then loadingBlock; else contentBlock"
+  ></ng-container>
+  <ng-template #contentBlock>
+    <p>Data Loaded Successfully</p>
+  </ng-template>
+
+  <ng-template #loadingBlock>
+    <p>Loading Data....</p>
+  </ng-template>
+
+  <p *ngIf="user as std">Hello, {{ std.name }}</p>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Username:</mat-label>
+    <input matInput [(ngModel)]="username" />
+  </mat-form-field>
+
+  <p *ngIf="username.length <= 3" style="color: red">Username is Too short</p>
+</div>
