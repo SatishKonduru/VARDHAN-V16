@@ -21,6 +21,7 @@ import { TempRefVariablesComponent } from './components/temp-ref-variables/temp-
 import { FormsModule } from '@angular/forms';
 import { IfComponent } from './components/if/if.component';
 import { SwitchComponent } from './components/switch/switch.component';
+import { ForComponent } from './components/for/for.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { SwitchComponent } from './components/switch/switch.component';
     TempRefVariablesComponent,
     IfComponent,
     SwitchComponent,
+    ForComponent,
   ],
   imports: [
     CommonModule,
