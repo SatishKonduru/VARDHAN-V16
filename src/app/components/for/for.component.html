@@ -48,3 +48,19 @@
     </li>
   </ul>
 </div>
+<hr>
+<ul>
+  <li *ngFor="let item of myObj | keyvalue ">
+    {{item.key}} - {{item.value}}
+  </li>
+</ul>
+<hr>
+<mat-form-field appearance="outline">
+  <mat-label>Choose City</mat-label>
+  <mat-select [(ngModel)] = 'selectedCity'>
+    <mat-option *ngFor="let city of cities" [value]="city">
+      {{city}}
+    </mat-option>
+
+  </mat-select>
+</mat-form-field>

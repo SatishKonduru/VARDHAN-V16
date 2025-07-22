@@ -33,4 +33,13 @@ export class ForComponent {
       items: ['Milk', 'Cheese'],
     },
   ];
+
+  myObj = {
+    name: 'Satish',
+    role: 'Developer',
+    location: 'India',
+  };
+
+  cities: string[] = ['Hyderabad', 'Bangalore', 'Chennai', 'Mumbai', 'Delhi'];
+  selectedCity = '';
 }
