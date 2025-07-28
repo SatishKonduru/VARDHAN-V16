@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./sender.component.css'],
 })
 export class SenderComponent {
-  message = 'This is is from Parent Component';
+  message = 'This is is from Parent Component......';
   data: any;
   @Input() returnPostman;
 }

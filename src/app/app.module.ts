@@ -24,6 +24,8 @@ import { SwitchComponent } from './components/switch/switch.component';
 import { ForComponent } from './components/for/for.component';
 import { SenderComponent } from './components/sender/sender.component';
 import { ReceiverComponent } from './components/receiver/receiver.component';
+import { ViewChildComponent } from './components/view-child/view-child.component';
+import { TopicComponent } from './components/topic/topic.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { ReceiverComponent } from './components/receiver/receiver.component';
     ForComponent,
     SenderComponent,
     ReceiverComponent,
+    ViewChildComponent,
+    TopicComponent,
   ],
   imports: [
     CommonModule,
