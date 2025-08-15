@@ -1,0 +1,37 @@
+<app-topic [topic]="topicName"></app-topic>
+<div class="container">
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Enter Something...</mat-label>
+      <input matInput #inputBox value="SATISH" />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Enter Something...</mat-label>
+      <input matInput #inputBox value="RSK" />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Enter Something...</mat-label>
+      <input matInput #inputBox value="VARDHAN" />
+    </mat-form-field>
+  </p>
+  <button mat-raised-button color="primary" (click)="logValues()">
+    Log all Inputs
+  </button>
+  <hr />
+  <p>
+    <app-child2></app-child2>
+    <app-child2></app-child2>
+    <app-child2></app-child2>
+    <app-child2></app-child2>
+    <app-child2></app-child2>
+    <app-child2></app-child2>
+  </p>
+
+  <button mat-stroked-button color="warn" (click)="greetAll()">
+    Greet all Children
+  </button>
+</div>

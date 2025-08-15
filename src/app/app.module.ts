@@ -28,6 +28,8 @@ import { ViewChildComponent } from './components/view-child/view-child.component
 import { TopicComponent } from './components/topic/topic.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
+import { Parent2Component } from './components/parent2/parent2.component';
+import { Child2Component } from './components/child2/child2.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { ChildComponent } from './components/child/child.component';
     TopicComponent,
     ParentComponent,
     ChildComponent,
+    Parent2Component,
+    Child2Component,
   ],
   imports: [
     CommonModule,
