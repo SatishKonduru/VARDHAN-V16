@@ -30,6 +30,8 @@ import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { Parent2Component } from './components/parent2/parent2.component';
 import { Child2Component } from './components/child2/child2.component';
+import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
+import { QuestionComponent } from './components/question/question.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { Child2Component } from './components/child2/child2.component';
     ChildComponent,
     Parent2Component,
     Child2Component,
+    QuestionnaireComponent,
+    QuestionComponent,
   ],
   imports: [
     CommonModule,
