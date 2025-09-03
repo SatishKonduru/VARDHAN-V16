@@ -1,8 +1,29 @@
-<div class="container">
+ <!--<div class="container">
   <app-question *ngFor="let q of questions" [question]="q"></app-question>
   <button mat-button color="warn" (click)="checkAnswers()">
     Is All Questions Ansered?
   </button>
   <p *ngIf="allAnswered">✅ All Questions Answered</p>
   <p *ngIf="!allAnswered && checked">❌ Some question(s) are UnAnwered</p>
+</div>-->
+
+<div class="container">
+  <div *ngFor="let q of newQuestions; let i = index" class="d-flex">
+    <app-question [question]="q.text"></app-question>
+    <button mat-icon-button color="warn" (click)="removeQuestion(i)"><mat-icon>delete</mat-icon></button>
+  </div>
+
+  <hr>
+  <h4>Add New Question..</h4>
+  <mat-form-field appearance="outline">
+    <mat-label>New Question: </mat-label>
+    <input matInput [(ngModel)]="newQuestion">
+  </mat-form-field>
+  <button mat-raised-button color="accent" (click)="addQuestion()">Add New Question</button>
+
+  <hr>
+
+  <button mat-stroked-button color="warn" (click)="checkAnswers()">Check if all answered</button>
+  <p *ngIf="allAnswered">✅ All Questions answered</p>
+  <p *ngIf="!allAnswered && checked">❌ Some questions are Un-Answered</p>
 </div>
