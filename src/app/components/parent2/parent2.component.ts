@@ -39,3 +39,5 @@ export class Parent2Component {
     this.child2.forEach((child) => child.sayHello());
   }
 }
+
+

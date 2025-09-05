@@ -1,0 +1,15 @@
+<div
+  class="container"
+  style="
+    border: 2px solid red;
+    height: 300px;
+    padding: 10px;
+    background-color: antiquewhite;
+  "
+>
+  <app-topic [topic]="topicName"></app-topic>
+  <h2>This is Parent Panal Component</h2>
+  <app-child-panel>
+    <p #contentParagraph>Hello i am from Parent Panel</p>
+  </app-child-panel>
+</div>
