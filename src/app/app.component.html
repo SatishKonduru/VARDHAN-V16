@@ -26,8 +26,24 @@
 <!-- <app-parent></app-parent> -->
 <!-- <app-parent2></app-parent2> -->
 <!-- <app-questionnaire></app-questionnaire> -->
- <div class="container" style="background-color: silver;">
+ <!-- <div class="container" style="background-color: silver;">
 <app-parent-panel></app-parent-panel>
+ </div> -->
+<app-modal>
+  <!-- Normal Projectioni -->
+  <app-modal-header>
+    <h4>This is Modal Header</h4>
+  </app-modal-header>
 
- </div>
+  <!-- with attribute selection -->
+  <app-modal-body modal-body>
+    <p>This is Modal Body Content</p>
+  </app-modal-body>
+
+  <!-- with Class (.)/Id (#) value selection -->
+  <app-modal-footer id="modal-footer">
+    <button mat-button color="primary">OK</button>
+    <button mat-button color="warn">Cancel</button>
+  </app-modal-footer>
+</app-modal>
 

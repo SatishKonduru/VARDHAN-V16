@@ -35,6 +35,11 @@ import { QuestionComponent } from './components/question/question.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ParentPanelComponent } from './components/parent-panel/parent-panel.component';
 import { ChildPanelComponent } from './components/child-panel/child-panel.component';
+import { ModalFooterComponent } from './components/modal-footer/modal-footer.component';
+
+import { ModalHeaderComponent } from './components/modal-header/modal-header.component';
+import { ModalBodyComponent } from './components/modal-body/modal-body.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +66,10 @@ import { ChildPanelComponent } from './components/child-panel/child-panel.compon
     QuestionComponent,
     ParentPanelComponent,
     ChildPanelComponent,
+    ModalFooterComponent,
+    ModalComponent,
+    ModalHeaderComponent,
+    ModalBodyComponent,
   ],
   imports: [
     CommonModule,

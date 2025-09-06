@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="modal-container">
+    <!-- Injecting header (Normal Projection)-->
+    <div class="modal-header">
+      <ng-content select="app-modal-header"></ng-content>
+    </div>
+
+    <!-- Inject Body (Attribute Selection)-->
+    <div class="modal-body">
+      <ng-content select="[modal-body]"></ng-content>
+    </div>
+
+    <!-- Inject Footer (Class value selection) -->
+    <div class="modal-footer">
+      <ng-content select="#modal-footer"></ng-content>
+    </div>
+
+    <!-- show @ContentChild() -->
+    <div class="debug-info">
+      <p>
+        <strong>Is Header Projected?</strong>
+        {{ headerAvailable ? "✅ YES" : "❌ No" }}
+      </p>
+      <p>
+        <strong>Is Body Projected?</strong>
+        {{ bodyAvailable ? "✅ YES" : "❌ No" }}
+      </p>
+      <p>
+        <strong>Is Footer Projected?</strong>
+        {{ footerAvailable ? "✅ YES" : "❌ No" }}
+      </p>
+    </div>
+  </div>
+</div>
